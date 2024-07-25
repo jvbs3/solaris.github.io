@@ -9,6 +9,7 @@ const carousel = document.querySelector('.carousel');
 const carouselItems = carousel.querySelectorAll('.carousel-item');
 
 let currentIndex = 0;
+let carouselInterval;
 showCarouselItem(0);
 carouselInterval = setInterval(nextCarouselItem, 2000);
 
