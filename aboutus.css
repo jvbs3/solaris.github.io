@@ -1,0 +1,246 @@
+/* Общие стили */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  cursor: url('star.png') 10 10, auto;
+  background-color: #f9f9f9;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Шапка сайта */
+header {
+  background-image: url('foto.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); z-index: 1;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-family: 'Bitter', serif;
+  font-size: 24px;
+  font-weight: 700;
+  font-style: italic;
+  margin: 0;
+  color: #FFF9F0;
+}
+
+/* Панель навигации */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: rgba(133, 143, 180, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links a {
+  color: #EDF1F6;
+  font-family: 'Bitter', serif;
+  font-size: 19px;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0;
+}
+
+.nav-links a:hover {
+  color: #EDF1F6;
+  font-family: 'Bitter', serif;
+  font-size: 19px;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0;
+  background-color: #858FB4;
+}
+
+.toggle-btn {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  background-color: rgba(133, 143, 180, 0.8);
+  padding: 10px;
+}
+
+.toggle-btn span {
+  background-color: #333;
+  width: 25px;
+  height: 3px;
+  margin-bottom: 5px;
+}
+
+/* Основной контент */
+main {
+  background-image: url('foto.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+ height: calc(100vh - 120px);
+  color: #FFFFFF; 
+  overflow-y: auto; /* add this to make the main content scrollable */
+  height: calc(100vh - 120px); /* subtract the height of the header and footer */
+  padding-bottom: 20px; /* add some padding to the bottom */
+}
+}
+
+
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+
+
+.section-text {
+  width: 60%;
+  margin: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: italic;
+  color: #FFFFFF; /* added white text color */
+}
+
+/* Подвал сайта */
+footer {
+  background-image: url('foto.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+
+
+.contact-info p {
+  margin-right: 20px;
+  color: #EDF1F6;
+  font-family: 'Bitter', serif;
+  font-size: 19px;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0;
+}
+
+
+.email-btn {
+  background-color: #858FB4;
+  color: #EDF1F6;
+  font-family: 'Bitter', serif;
+  font-size: 19px;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+}
+
+.location {
+  color: #EDF1F6;
+  font-family: 'Bitter', serif;
+  font-size: 19px;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Адаптивные стили для маленьких экранов */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .logo {
+    margin-bottom: 10px;
+  }
+  
+  nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .nav-links li {
+    margin: 10px 0;
+    width: 100%;
+  }
+  
+  .toggle-btn {
+    display: flex;
+  }
+  
+  .nav-links.show {
+    display: flex;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .contact-info {
+    margin-bottom: 10px;
+  }
+}

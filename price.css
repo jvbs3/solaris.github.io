@@ -1,0 +1,304 @@
+/* Общие стили */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  cursor: url('star.png') 10 10, auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Шапка сайта */
+header {
+  background-image: url('foto.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 10px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-family: 'Bitter', serif;
+  font-size: 24px;
+  font-weight: 700;
+  font-style: italic;
+  margin: 0;
+  color: #FFF9F0;
+}
+
+/* Панель навигации */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: rgba(133, 143, 180, 0.8);
+  padding: 10px;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links a {
+  color: #EDF1F6;
+  font-family: 'Bitter', serif;
+  font-size: 19px;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0;
+}
+
+.nav-links a:hover {
+  color: #EDF1F6;
+  font-family: 'Bitter', serif;
+  font-size: 19px;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0;
+}
+.container h2{
+	font-size: 30px;
+	font-weight: 600;
+	margin-top: 5px;
+	color:#EDF1F6;
+}
+.container p{
+	font-size: 11px;
+	color:#858FB4;
+	margin-top: -40px;
+}
+
+
+.toggle-btn {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  background-color: rgba(133, 143, 180, 0.8);
+  padding: 10px;
+}
+
+.toggle-btn span {
+  background-color: #333;
+  width: 25px;
+  height: 3px;
+  margin-bottom: 5px;
+}
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('foto.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.carousel-inner {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 20px;
+}
+
+
+.container{
+	width: relative;
+	height: 100vh;
+	background-image: url('foto.jpg');
+	background-position: center;
+	background-size: cover;
+	padding: 0 10%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap:20px;
+}
+.card{
+width: 600px;
+margin: 10px;
+max-width: 440px;
+color:#EDF1F6;
+text-align: center;
+padding: 50px 35px;
+border: 1px solid rgba(255, 255, 255, 0.3);
+background:rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+}
+.card img{
+	width: 140px;
+	border-radius: 50%;
+}
+.card h2{
+	font-size: 40px;
+	font-weight: 600;
+	margin-top: 8px;
+}
+.card p{
+	font-size: 16px;
+	margin: 10px auto;
+	max-width: 330px;
+	color: #858FB4;
+}
+.card h1{
+	font-size: 12px;
+	margin: 10px auto;
+	max-width: 330px;
+}
+.btn{
+	text-decoration: none;
+	display: inline-block;
+	font-size: 18px;
+	font-weight:500;
+	background: #858FB4;
+	color: #EDF1F6;
+	padding: 10px 30px;
+	border-radius: 20px;
+	margin: 30px 0 10px;
+	border: none;
+	outline: none;
+	position: relative;
+	box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+	transition: box-shadow 0.25s;
+	
+}
+.btn:active{
+	background: #d80972;
+	box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+/* Основной контент */
+main {
+flex-grow:1;}
+
+
+/* Подвал сайта */
+footer {
+  background-image: url('foto.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 10px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.contact-info p {
+  margin-right: 20px;
+  color: #EDF1F6;
+  font-family: 'Bitter', serif;
+  font-size: 19px;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0;
+}
+
+.email-btn {
+  background-color: #858FB4;
+  color: #EDF1F6;
+  font-family: 'Bitter', serif;
+  font-size: 19px;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+}
+
+.location {
+  color: #EDF1F6;
+  font-family: 'Bitter', serif;
+  font-size: 19px;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Адаптивные стили для маленьких экранов */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .logo {
+    margin-bottom: 10px;
+  }
+  
+  nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .nav-links li {
+    margin: 10px 0;
+    width: 100%;
+  }
+  
+  .toggle-btn {
+    display: flex;
+  }
+  
+  .nav-links.show {
+    display: flex;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .contact-info {
+    margin-bottom: 10px;
+  }
+}

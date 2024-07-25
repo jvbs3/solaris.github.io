@@ -1,0 +1,244 @@
+/* Общие стили */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  cursor: url('star.png') 10 10, auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Шапка сайта */
+header {
+  background-image: url('foto.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 10px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-family: 'Bitter', serif;
+  font-size: 24px;
+  font-weight: 700;
+  font-style: italic;
+  margin: 0;
+  color: #FFF9F0;
+}
+
+/* Панель навигации */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: rgba(133, 143, 180, 0.8);
+  padding: 10px;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links a {
+  color: #EDF1F6;
+  font-family: 'Bitter', serif;
+  font-size: 19px;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0;
+}
+
+.nav-links a:hover {
+  color: #EDF1F6;
+  font-family: 'Bitter', serif;
+  font-size: 19px;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0;
+}
+
+.toggle-btn {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  background-color: rgba(133, 143, 180, 0.8);
+  padding: 10px;
+}
+
+.toggle-btn span {
+  background-color: #333;
+  width: 25px;
+  height: 3px;
+  margin-bottom: 5px;
+}
+
+/* Основной контент */
+main {
+   background-image: url('lun.jpg');
+    background-size: cover;
+    background-position: center;
+  padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.contented p {
+  font-size: 30px;
+  font-weight: 500;
+}
+.contented h3{
+  font-size: 64px;
+  font-weight: 500;
+
+}
+
+.contented h3 span{
+  color: #EDB240;
+
+}
+.contented{
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+  color:#EDF1F6;
+}
+.timing{
+  display: flex;
+  font-weight: 1000;
+  font-size: 15px; /* added px unit */
+}
+
+.timing div{
+  flex-basis: 100px;
+  color: #EDB240;
+}
+
+
+/* Подвал сайта */
+footer {
+  background-image: url('foto.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 10px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.contact-info p {
+  margin-right: 20px;
+  color: #EDF1F6;
+  font-family: 'Bitter', serif;
+  font-size: 19px;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0;
+}
+
+.email-btn {
+  background-color: #858FB4;
+  color: #EDF1F6;
+  font-family: 'Bitter', serif;
+  font-size: 19px;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+}
+
+.location {
+  color: #EDF1F6;
+  font-family: 'Bitter', serif;
+  font-size: 19px;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Адаптивные стили для маленьких экранов */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .logo {
+    margin-bottom: 10px;
+  }
+  
+  nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .nav-links li {
+    margin: 10px 0;
+    width: 100%;
+  }
+  
+  .toggle-btn {
+    display: flex;
+  }
+  
+  .nav-links.show {
+    display: flex;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .contact-info {
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,102 @@
+<!-- feedback.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Космическая онлайн школа СОЛЯРИС</title>
+    <link rel="stylesheet" type="text/css" href="feedback.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<header>
+  <div class="header-content">
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="Логотип СОЛЯРИС" class="logo-img">
+      <h1 class="logo-text">СОЛЯРИС-астрономическиая онлайн школа</h1>
+    </a>
+    
+    <nav>
+      <div class="toggle-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <ul class="nav-links">
+       <li><a href="aboutus.html">О нас</a></li>
+        <li><a href="price.html">Услуги</a></li>
+        <li><a href="feedback.html">Запись/Связь</a></li>
+        <li><a href="bounty.html">Приложение</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div id="content">
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратная связь </title>
+    <div class="container" id="container">
+  <div class="form-container sign-in">
+    <form method="post" action="test.php">
+      <h1>Обратная связь/Запись</h1>
+        <span>Введите имя </span>
+      <input type="text" placeholder="Имя" name="name">
+      <span>Введите почту</span>
+      <input type="email" placeholder="Введите почту" name="email">
+	   <span>Введите Ваш запрос</span>
+      <textarea name="message" placeholder="Текст"></textarea>
+      <button>Отправить</button>
+    </form>
+  </div>
+    </div>
+
+    <div id="response"></div>
+
+</div>
+</main>
+
+<footer>
+  <div class="footer-content">
+    <div class="contact-info">
+      <p>Телефон: +7 (123) 456-78-90</p>
+      <a href="mailto:info@solaris.ru" class="email-btn">Задать вопрос</a>
+    </div>
+    <p class="location">г. Москва, ул. Космонавтов, д. 12</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+<!-- test.php -->
+
+<?php
+// Подключаемся к базе данных
+$link = mysqli_connect("localhost", "root", "", "feedbackk");
+
+// Проверяем соединение
+if (!$link) {
+    die("Ошибка подключения к базе данных: ". mysqli_connect_error());
+}
+
+// Обработка формы
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $message = $_POST["message"];
+
+    // Вставляем данные в базу данных
+    $sql = "INSERT INTO feedbackk (name, email, message) VALUES ('$name', '$email', '$message')";
+    if (mysqli_query($link, $sql)) {
+        echo "Данные успешно отправлены!";
+    } else {
+        echo "Ошибка отправки данных: ". mysqli_error($link);
+    }
+}
+
+// Закрываем соединение
+mysqli_close($link);
+?>

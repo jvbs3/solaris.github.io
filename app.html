@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Космическая онлайн школа СОЛЯРИС</title>
+    <link rel="stylesheet" type="text/css" href="app.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<header>
+  <div class="header-content">
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="Логотип СОЛЯРИС" class="logo-img">
+      <h1 class="logo-text">СОЛЯРИС-астрономическиая онлайн школа</h1>
+    </a>
+    
+    <nav>
+      <div class="toggle-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <ul class="nav-links">
+        <li><a href="aboutus.html">О нас</a></li>
+        <li><a href="pricee.html">Услуги</a></li>
+        <li><a href="feedback.php">Запись/Связь</a></li>
+        <li><a href="bounty.html">Приложение</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div id="content">
+    <div class="container">
+      <img src="logo.png" class="content-logo">
+      <div class="contented">
+        <h3> Скоро <span>SolApp</span> будет доступен для скачивания</h3>
+        <div class="timing">
+          <div>
+            <p id="days">00</p>
+            <span>Дней</span>
+          </div>
+          <div>
+            <p id="hours">00</p>
+            <span>Часов</span>
+          </div>
+          <div>
+            <p id="minutes">00</p>
+            <span>Минут</span>
+          </div>
+          <div>
+            <p id="seconds">00</p>
+            <span>Секунд</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+var countDownDate = new Date("Jul 26, 2024 00:00:00").getTime();
+var x = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("days").innerHTML = days;
+  document.getElementById("hours").innerHTML = hours;
+  document.getElementById("minutes").innerHTML = minutes;
+  document.getElementById("seconds").innerHTML = seconds;
+
+    if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("days").innerHTML = "00";
+    document.getElementById("hours").innerHTML = "00";
+    document.getElementById("minutes").innerHTML = "00";
+    document.getElementById("seconds").innerHTML = "00";
+  }
+}, 1000);
+</script>
+
+<footer>
+  <div class="footer-content">
+    <div class="contact-info">
+      <p>Телефон: +7 (123) 456-78-90</p>
+      <a href="mailto:info@solaris.ru" class="email-btn">Задать вопрос</a>
+    </div>
+    <p class="location">г. Москва, ул. Космонавтов, д. 12</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
